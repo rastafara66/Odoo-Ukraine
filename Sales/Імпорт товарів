@@ -1,23 +1,28 @@
 Шаблони імпорту надають інструменти для імпорту в odoo більшості даних (контакти, товари, банківськи дані, і т.і.). Ви можете переглядати ці дані за допомогую будь-яких програм, які розуміють елекроні таблиці (Microsoft Office, OpenOffice, Google Drive, і т.і.).
 
-==Як налаштувати файл обміну==
+== Як налаштувати файл обміну ==
 
 Видалите колонки, які вам не потрібні. Ми радимо не видаляти колонки з ID.
-Set a unique ID to every single record by dragging down the ID sequencing.
-Don't change labels of columns you want to import. Otherwise Odoo won't recognize them anymore and you will have to map them on your own in the import screen.
-To add new columns,Feel free to add new columns but the fields need to exist in Odoo. If Odoo fails in matching the column name with a field, you can make it manually when importing by browsing a list of available fields.
+Встановіть унікальний ID для кожного запису перетягнувши вниз ID послідовність.
+Не змінюйте назви колонок, які ви хочете імпортувати. Інакше Odoo більше не визначе їх і вам доведеться їх визначати на свій погляд у формі імпорту.
 
-==Why an “ID” column==
+Як додати нові колонки:
 
-The ID is an unique identifier for the line item. Feel free to use the one of your previous software to ease the transition to Odoo.
+Ви вільні додавати будь-які колонки, але вони мають бути присутні в Odoo. Якщо Odoo не знайде ці колонки (якщо імена колонок не співпадуть), ви можете створити їх в Odoo, вибравши зі списку доступних полів.
 
-Setting an ID is not mandatory when importing but it helps in many cases:
+== Навіщо “ID” колонка ==
 
-Update imports: you can import the same file several times without creating duplicates;
+ID - це унікальний ідентифікатор для кожного рядка. Feel free to use the one of your previous software to ease the transition to Odoo.
 
-==Import relation fields (see here below).==
+Встановлення ID не є обов'язковим при імпорті, але це допоможе у багатьох випадках:
 
-How to import relation fields
-An Odoo object is always related to many other objects (e.g. a product is linked to product categories, attributes, vendors, etc.). To import those relations you need to import the records of the related object first from their own list menu.
+Апдейт імпорту: ви можете імпортувати один й той самий файл кілька разів без створення дуплікатів.
 
-You can do it using either the name of the related record or its ID. The ID is expected when two records have the same name. In such a case add " / ID" at the end of the column title (e.g. for product attributes: Product Attributes / Attribute / ID).
+== Імпорт реляційних полів ==
+
+Як імпортувати реляційні поля
+
+Odoo об'єкт завжди  пов'язаний з багатьма іншими об'єктами (до прикладу товар пов'язаний з категоріями товару, атрибутами, постачальниками, etc.). 
+Щоб імпортувати ці взаємозв'язки вам необхідно по-перше імпортувати записи цих пов'язаних об'єктів (наприклад, список категорій).
+
+Ви можете зробити це, використовуючи ім'я відповідної записи або його ідентифікатор. Використовуйте ID якщо два записи мають однакове ім'я. У такому випадку додайте " / ID" у кінці заголовку колонки. (e.g. для атрибутів товару: Product Attributes / Attribute / ID).
